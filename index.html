@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Hourly Pay Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-container">
+            <div class="forms" id="form-container">
+                <input type="text" placeholder="Name" id="name" value="" autocomplete="off">
+                <input type="number" placeholder="Hourly Pay" value="" id="hourly-pay">
+                <input type="number" placeholder="Hours Worked" value="" id="hours-worked">
+                <button id="submit-btn">Submit</button>
+            </div>
+            <div class="salary-output" id="display-salary">
+                <div class="back-button-container">
+                    <button id="back-btn">Back</button>
+                </div>
+                <p id="greetings"></p>
+                <p >Your salary for this month</p>
+                <h1 id="salary-placeholder"></h1>
+                <button id="claim-btn">Claim!</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
