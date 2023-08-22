@@ -11,8 +11,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FAF1E4;
-    margin: 140px;
+    background-color: #CEDEBD;
+    margin: 50px;
 
 }
 
@@ -46,12 +46,27 @@ body {
     justify-content: center;
     margin: 50px;
     cursor: pointer;
-    background: transparent;
     padding: 10px;
-    background-color: #435334;
     border-radius: 9px;
+    background-color: #435334;
     color: white;
+    outline: none;
 
+}
+
+.forms button:hover {
+
+    outline: 1px solid #435334;
+    background-color: transparent;
+    color: #435334;
+
+}
+
+.forms button:active {
+
+    background-color: #435334;
+    color: white;
+    outline: none;
 
 }
 
@@ -72,7 +87,7 @@ body {
 
 }
 
-#claim-btn{
+#claim-btn {
 
     display: flex;
     flex-direction: column;
@@ -88,12 +103,37 @@ body {
 
 }
 
+#claim-btn:hover {
+
+    color: #435334;
+    background-color: transparent;
+    outline: 1px solid #435334;
+
+
+}
+
+#claim-btn:active {
+
+    color: white;
+    outline: none;
+    background-color: #435334;
+
+}
+
 #back-btn {
 
     cursor: pointer;
     background: transparent;
-    padding: 10px;
-    border-radius: 9px;
+    margin: 10px;
+    border-radius: 6px;
     color: black;
+
+}
+
+#back-btn:hover {
+
+    background: #435334;
+    color: white;
+
 
 }

@@ -4,29 +4,48 @@ let hoursWorked = document.getElementById('hours-worked');
 
 const button = document.getElementById('submit-btn');
 
-button.addEventListener('click', function(){
+button.addEventListener('click', function () {
 
     let totalPay = hourlyPay.value * hoursWorked.value;
 
-    document.getElementById('display-salary').style.display="flex";
-    document.getElementById('form-container').style.display="none";
-    document.getElementById('greetings').innerHTML = ('Hi, ' + employeeName.value);
-    document.getElementById('salary-placeholder').innerHTML = ('<span style="color: green;">' + totalPay + '$</span>');
-    
-});
+    if (!(employeeName.value == "" || hourlyPay.value == 0 || hoursWorked.value == 0)) {
 
-const claim = document.getElementById('claim-btn');
+        document.getElementById('display-salary').style.display = "flex";
+        document.getElementById('form-container').style.display = "none";
+        document.getElementById('greetings').innerHTML = ('Hi, ' + employeeName.value);
+        document.getElementById('salary-placeholder').innerHTML = ('<span style="color: green;">$' + totalPay + '</span>');
 
-claim.addEventListener('click', function(){
+    } else {
 
-    window.alert('Sana all. Nananaginip ka ata?');
+        window.alert('please fill in the blanks');
 
-});
+    }
 
-const back = document.getElementById('back-btn');
+    var claimCount = 0;
 
-back.addEventListener('click', function(){
+    const claim = document.getElementById('claim-btn');
 
-    location.reload();
+    claim.addEventListener('click', function () {
+
+        if (claimCount < 1) {
+
+            window.alert('$' + totalPay + ' has been added to your account.');
+            claimCount++;
+
+        } else {
+
+            window.alert('you already claimed your salary.');
+        }
+
+    });
+
+
+    const back = document.getElementById('back-btn');
+
+    back.addEventListener('click', function () {
+
+        location.reload();
+
+    });
 
 });
