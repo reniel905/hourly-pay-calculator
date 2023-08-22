@@ -42,9 +42,21 @@ button.addEventListener('click', function () {
 
     const back = document.getElementById('back-btn');
 
+
     back.addEventListener('click', function () {
 
-        location.reload();
+        if (claimCount == 0) {
+
+            if (window.confirm("you haven't claim your salary yet. are you sure you want to go back?") == true){
+
+                location.reload();
+
+            }
+
+        } else {
+
+            location.reload();
+        }
 
     });
 
