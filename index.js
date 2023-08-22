@@ -15,13 +15,7 @@ button.addEventListener('click', function () {
         document.getElementById('greetings').innerHTML = ('Hi, ' + employeeName.value);
         document.getElementById('salary-placeholder').innerHTML = ('<span style="color: green;">$' + totalPay + '</span>');
 
-    } else {
-
-        window.alert('please fill in the blanks');
-
-    }
-
-    var claimCount = 0;
+        var claimCount = 0;
 
     const claim = document.getElementById('claim-btn');
 
@@ -59,5 +53,11 @@ button.addEventListener('click', function () {
         }
 
     });
+
+    } else {
+
+        window.alert('please fill in the blanks');
+
+    }
 
 });
